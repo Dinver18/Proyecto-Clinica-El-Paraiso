@@ -1,9 +1,12 @@
 
 import React from 'react';
 import Foto from '../../assets/FotoD.jpg';
+import CardServices from './components/CardServices';
+
 
 function Home() {
   return (
+    <main>
     <div className=" relative  flex flex-col items-center w-full top-0  "  >
       <div className="w-full ">
     <img src={Foto} alt="Imagen de fondo" className="relative w-full object-cover opacity-80" />
@@ -13,7 +16,10 @@ function Home() {
       <h2 className="text-sm text-center sm:text-base md:text-lg lg:text-xl font-bold">"Transformando vidas con atención médica dedicada y accesible."</h2>
     </div>
   </div>
-  
+
+  {/* Sección de servicios */}
+<CardServices/>
+  </main>
   );
 }
 

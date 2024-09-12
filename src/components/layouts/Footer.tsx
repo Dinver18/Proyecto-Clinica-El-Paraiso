@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <footer className="w-full bg-primary p-4 text-white fixed bottom-0 left-0 z-40">
+        <footer className="w-full bg-primary p-4 text-white bottom-0 left-0 z-40 ">
             {/* Primer div: Ocupa el ancho completo del footer */}
             <div className="relative -mx-4 -mr-4 -mt-4 bg-secondary p-4 text-center">
                 <h6 className="md:text-2xl text-black font-bold">Clinica popular El Paraiso</h6>

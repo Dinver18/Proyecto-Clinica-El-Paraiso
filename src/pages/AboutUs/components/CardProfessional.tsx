@@ -5,14 +5,12 @@ function CardProfessional() {
     return (
       <section>
       {/* Container */}
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-10">
+      <div className="mx-auto w-full max-w-7xl px-5 py-14 md:px-10 md:py-24 lg:py-10">
         {/* Title */}
-        <h2 className="text-center text-3xl font-bold md:text-5xl">
-          Nuestro Equipo
+        <h2 className="left-5 text-2xl font-bold md:text-5xl mb-8">
+          Área de Profesionales
         </h2>
-        <p className="mx-auto mb-8 mt-4 text-center text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16">
-         Contamos con una amplia gama de profesionales
-        </p>
+       
         {/* Content */}
         <div className="mx-auto grid justify-items-center gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 lg:justify-items-stretch">
           {/* Item */}

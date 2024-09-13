@@ -6,34 +6,34 @@ const slides = [
     title: "Calidad",
     description: "Nos esforzamos por ofrecer servicios médicos de excelencia y gratuitos.",
     icon: <FaHeart className="text-secondary text-9xl" />,
-    backgroundColor: "bg-gradient-to-r from-blue-500 to-gray-100",
+    backgroundColor: "bg-gradient-to-r from-primary to-gray-100",
   },
   {
     title: "Confianza",
     description: "Nuestros pacientes nos recomiendan por nuestra atención personalizada.",
     icon: <FaCheckCircle className="text-secondary text-9xl" />,
-    backgroundColor: "bg-gradient-to-r from-green-500 to-gray-100",
+    backgroundColor: "bg-gradient-to-r from-primary to-gray-100",
   },
 
   {
     title: "Transparencia",
     description: "Nos caracterizamos por ser claros y directos en nuestras acciones y decisiones, fomentando la confianza en nuestros pacientes.",
     icon: <FaEye className="text-secondary text-9xl" />,
-    backgroundColor: "bg-gradient-to-r from-blue-200 to-gray-100",
+    backgroundColor: "bg-gradient-to-r from-primary to-gray-100",
   },
 
   {
     title: "Innovación",
     description: "Buscamos siempre mejorar a través de nuevas ideas, tecnologías y procesos para ofrecer el mejor servicio posible.",
     icon: <FaLightbulb className="text-secondary text-9xl" />,
-    backgroundColor: "bg-gradient-to-r from-yellow-200 to-gray-100",
+    backgroundColor: "bg-gradient-to-r from-primary to-gray-100",
   },
 
   {
     title: "Profesionalismo",
     description: "Actuamos con responsabilidad, respeto y dedicación, garantizando una atención de calidad en cada servicio que ofrecemos.",
     icon: <FaBriefcase className="text-secondary text-9xl" />,
-    backgroundColor: "bg-gradient-to-r from-green-200 to-gray-100",
+    backgroundColor: "bg-gradient-to-r from-primary to-gray-100",
   },
   // Puedes agregar más slides aquí
 ];
@@ -57,12 +57,12 @@ function CarouselValues() {
       {/* Contenedor de cada slide */}
       <div className={`w-full h-full flex flex-col items-center justify-center text-center px-4 transition-all duration-500 ${slides[currentIndex].backgroundColor}`}>
         <div>{slides[currentIndex].icon}</div>
-        <h2 className="text-4xl lg:text-6xl font-bold text-blue-900 mt-4">{slides[currentIndex].title}</h2>
-        <p className="text-lg font-bold text-black mt-2">{slides[currentIndex].description}</p>
+        <h2 className="text-4xl lg:text-6xl font-bold text-black mt-4">{slides[currentIndex].title}</h2>
+        <p className="text-md font-bold text-black mt-2">{slides[currentIndex].description}</p>
       </div>
 
       {/* Círculos indicadores */}
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}

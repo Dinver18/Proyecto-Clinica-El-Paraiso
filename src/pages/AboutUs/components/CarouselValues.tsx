@@ -1,16 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import FotoAC from '../assets/FotoAC.png';
-import A from '../assets/1.png';
-import B from '../assets/2.png';
-import C from '../assets/3.png';
-import D from '../assets/4.png';
+import { FaHeart, FaCheckCircle, FaEye, FaLightbulb, FaBriefcase } from 'react-icons/fa'; // Iconos de Font Awesome
 
-const images = [
-  FotoAC,
-  A,
-  B,
-  C,
-  D,
+const slides = [
+  {
+    title: "Calidad",
+    description: "Nos esforzamos por ofrecer servicios médicos de excelencia y gratuitos.",
+    icon: <FaHeart className="text-secondary text-9xl" />,
+    backgroundColor: "bg-gradient-to-r from-blue-500 to-gray-100",
+  },
+  {
+    title: "Confianza",
+    description: "Nuestros pacientes nos recomiendan por nuestra atención personalizada.",
+    icon: <FaCheckCircle className="text-secondary text-9xl" />,
+    backgroundColor: "bg-gradient-to-r from-green-500 to-gray-100",
+  },
+
+  {
+    title: "Transparencia",
+    description: "Nos caracterizamos por ser claros y directos en nuestras acciones y decisiones, fomentando la confianza en nuestros pacientes.",
+    icon: <FaEye className="text-secondary text-9xl" />,
+    backgroundColor: "bg-gradient-to-r from-blue-200 to-gray-100",
+  },
+
+  {
+    title: "Innovación",
+    description: "Buscamos siempre mejorar a través de nuevas ideas, tecnologías y procesos para ofrecer el mejor servicio posible.",
+    icon: <FaLightbulb className="text-secondary text-9xl" />,
+    backgroundColor: "bg-gradient-to-r from-yellow-200 to-gray-100",
+  },
+
+  {
+    title: "Profesionalismo",
+    description: "Actuamos con responsabilidad, respeto y dedicación, garantizando una atención de calidad en cada servicio que ofrecemos.",
+    icon: <FaBriefcase className="text-secondary text-9xl" />,
+    backgroundColor: "bg-gradient-to-r from-green-200 to-gray-100",
+  },
+  // Puedes agregar más slides aquí
 ];
 
 function CarouselValues() {
@@ -18,9 +43,9 @@ function CarouselValues() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000); // Cambiar la imagen cada 3 segundos
-    return () => clearInterval(interval); // Limpiar intervalo al desmontar el componente
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 10000); // Cambiar el slide cada 10 segundos
+    return () => clearInterval(interval);
   }, []);
 
   const handleDotClick = (index: React.SetStateAction<number>) => {
@@ -28,26 +53,20 @@ function CarouselValues() {
   };
 
   return (
-    
-    <div className="relative w-full h-[400px] mt-8">
-        
-      {/* Imágenes */}
-      <div className="w-full h-full overflow-hidden">
-        <img
-          src={images[currentIndex]}
-          alt={`Slide ${currentIndex + 1}`}
-          className="w-full h-full object-cover transition-all duration-500"
-        />
+    <div className="relative w-full h-[350px] mt-8">
+      {/* Contenedor de cada slide */}
+      <div className={`w-full h-full flex flex-col items-center justify-center text-center px-4 transition-all duration-500 ${slides[currentIndex].backgroundColor}`}>
+        <div>{slides[currentIndex].icon}</div>
+        <h2 className="text-4xl lg:text-6xl font-bold text-blue-900 mt-4">{slides[currentIndex].title}</h2>
+        <p className="text-lg font-bold text-black mt-2">{slides[currentIndex].description}</p>
       </div>
 
       {/* Círculos indicadores */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
-        {images.map((_, index) => (
+        {slides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'
-            }`}
+            className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'}`}
             onClick={() => handleDotClick(index)}
           ></button>
         ))}

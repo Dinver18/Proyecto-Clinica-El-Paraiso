@@ -17,6 +17,7 @@
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.10",
     "postcss": "^8.4.45",
+    "proyecto-clinica": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2"

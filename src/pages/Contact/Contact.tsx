@@ -1,11 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import ContactInfo from './components/ContactInfo';
+import CardUbicacion from './components/CardUbicacion';
 
 function Contact() {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Contacto</h2>
-      <p>Contáctanos para más información o para programar una cita. <Link to="/contacto" className="text-blue-600 underline">Ponte en contacto</Link></p>
+    <div className='relative  flex flex-col items-center w-full top-0 '>
+      <div className="p-4 border-b-8 border-b-primary w-full">
+        <h2 className="text-2xl font-bold mb-2">Contacto</h2>
+      </div>
+      
+      <ContactInfo />
+      <CardUbicacion /> 
     </div>
   );
 }

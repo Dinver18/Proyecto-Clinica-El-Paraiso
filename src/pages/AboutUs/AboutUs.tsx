@@ -1,4 +1,3 @@
-import React from 'react';
 import CarouselValues from './components/CarouselValues';
 import CardProfessional from './components/CardProfessional';
 import Foto from './assets/FotoClinica.jpg';

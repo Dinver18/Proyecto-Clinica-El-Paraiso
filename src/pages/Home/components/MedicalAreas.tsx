@@ -4,16 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faStethoscope, faPeopleGroup, faBaby, faPersonPregnant, faMinus, IconDefinition, faVenus, faSyringe, faHospital } from "@fortawesome/free-solid-svg-icons";
 
 function MedicalAreas() {
-    // State to manage open/close of each FAQ item
-    const [openFAQ, setOpenFAQ] = useState(null);
-
     // State to manage the number of FAQs visible
     const [visibleCount, setVisibleCount] = useState(4);
 
-    // Function to toggle the visibility of FAQ details
-    const toggleFAQ = (index) => {
+    // Definición del estado con un tipo que puede ser número o null
+    const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+    // Función con tipo explícito para el parámetro
+    const toggleFAQ = (index: number) => {
         setOpenFAQ(openFAQ === index ? null : index);
     };
+
 
 
     // Define the type for FAQ items

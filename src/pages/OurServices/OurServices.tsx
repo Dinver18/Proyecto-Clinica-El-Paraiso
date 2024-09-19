@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Farmacia from './components/Farmacia';
 

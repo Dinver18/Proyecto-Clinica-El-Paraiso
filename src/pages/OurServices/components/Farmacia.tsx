@@ -1,6 +1,6 @@
 // src/components/Farmacia.tsx
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function Farmacia  ()  {
   const [isAtencionesOpen, setIsAtencionesOpen] = useState(false);

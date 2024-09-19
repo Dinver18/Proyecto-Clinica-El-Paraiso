@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 function ContactInfo() {
     return (
-        <section className="flex flex-wrap">
-            <div className="bg-accent mx-auto mx-auto w-full md:px-10 md:py-8 w-screen">
+        <section className="flex flex-wrap w-full">
+            <div className="bg-accent mx-auto mx-auto w-full md:px-10 md:py-8">
                 <h2 className="text-2xl font-bold text-info">
                     No dudes en comunicarte con nosotros por nuestros canales principales de contacto:
                 </h2>

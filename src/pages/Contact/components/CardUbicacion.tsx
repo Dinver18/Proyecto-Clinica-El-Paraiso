@@ -4,9 +4,9 @@ import Foto from "../assets/MapImagen.jpg"
 
 function CardUbicacion() {
     return (
-        <section className="w-screen overflow-x-hidden"> {/* Asegura que el section ocupe el ancho de la pantalla */}
-            <div className="bg-white w-full px-4 md:px-10 py-8 max-w-full"> {/* Usa max-w-full para asegurar el ajuste al contenedor */}
-                <div className="flex items-center w-full">
+        <section className="w-full overflow-x-hidden"> {/* Asegura que el section ocupe el ancho de la pantalla */}
+            <div className="bg-white px-4 md:px-10 py-8 max-w-full"> {/* Usa max-w-full para asegurar el ajuste al contenedor */}
+                <div className="flex items-center">
                     <FontAwesomeIcon
                         icon={faLocationDot}
                         className="h-12 w-12 lg:h-15 lg:w-15 object-cover"

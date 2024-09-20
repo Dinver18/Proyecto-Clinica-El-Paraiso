@@ -13,16 +13,17 @@ function Navbar() {
       <div className="container mx-auto flex justify-center lg:justify-center items-center">
         {/* Enlaces de navegación */}
         <div className="hidden sm:flex items-center space-x-6">
-        <Link to="/" className="text-white px-3 py-2 hover:bg-blue-700 rounded font-bold text-sm sm:text-lg">
-            Inicio
-          </Link>
-          <Link to="/Ourservices" className="text-white px-3 py-2 hover:bg-blue-700 rounded font-bold text-sm sm:text-lg">
+        <Link to="/" className="text-white px-3 py-1  font-bold text-sm sm:text-lg hover:border-b-4 hover:border-yellow-400">
+        Inicio
+        </Link>
+
+          <Link to="/Ourservices" className="text-white px-3 py-1  font-bold text-sm sm:text-lg hover:border-b-4 hover:border-yellow-400">
             Nuestros Servicios
           </Link>
-          <Link to="/AboutUs" className="text-white px-3 py-2 hover:bg-blue-700 rounded font-bold text-sm sm:text-lg">
+          <Link to="/AboutUs" className="text-white px-3 py-1  font-bold text-sm sm:text-lg hover:border-b-4 hover:border-yellow-400">
             Sobre Nosotros
           </Link>
-          <Link to="/Contact" className="text-white px-3 py-2 hover:bg-blue-700 rounded font-bold text-sm sm:text-lg" >
+          <Link to="/Contact" className="text-white px-3 py-1  font-bold text-sm sm:text-lg hover:border-b-4 hover:border-yellow-400" >
             Contacto
           </Link>
         </div>

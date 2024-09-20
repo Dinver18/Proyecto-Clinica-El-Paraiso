@@ -7,6 +7,7 @@ import Contact from './pages/Contact/Contact';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Home from './pages/Home/Home';
 import Footer from './components/layouts/Footer';
+import ScrollUp from './components/layouts/ScrollUp';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Header />
         <Navbar />
+        <ScrollUp />
 
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Foto from '../../../assets/FotoB.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faStethoscope, faPeopleGroup, faBaby, faPersonPregnant, faMinus, IconDefinition, faVenus, faSyringe, faHospital } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faStethoscope, faPeopleGroup, faBaby, faPersonPregnant, faMinus, faVenus, faSyringe, faHospital } from "@fortawesome/free-solid-svg-icons";
+import FAQItem from "../Model/Areas";
 
 function MedicalAreas() {
     // State to manage the number of FAQs visible
@@ -16,57 +17,49 @@ function MedicalAreas() {
     };
 
 
-
-    // Define the type for FAQ items
-    interface FAQItem {
-        icon: IconDefinition; // Use FontAwesome icon definitions here
-        title: string;
-        content: string;
-    }
-
     // Dummy data for FAQs
     const faqs: FAQItem[] = [
         {
             icon: faStethoscope,
             title: "Medicina interna",
             content:
-                "Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl.",
+                "Especialidad que se enfoca en el diagnóstico y tratamiento de enfermedades en adultos, abordando condiciones complejas de salud.",
         },
         {
             icon: faPeopleGroup,
             title: "Medicina familiar",
             content:
-                "Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa.",
+                "Brinda atención integral a pacientes de todas las edades, enfocándose en la prevención y el bienestar familiar.",
         },
         {
             icon: faBaby,
             title: "Pediatria",
             content:
-                "Pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl.",
+                "Cuidado de la salud infantil, desde el nacimiento hasta la adolescencia, incluyendo desarrollo y enfermedades específicas de niños.",
         },
         {
             icon: faPersonPregnant,
             title: "Obstetricia",
             content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac venenatis est, at convallis magna.",
+                "Atención durante el embarazo y el parto, asegurando la salud de la madre y el bebé en el proceso.",
         },
         {
             icon: faVenus,
             title: "Ginecologia",
             content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac venenatis est, at convallis magna.",
+                "Salud del sistema reproductivo femenino, que incluye exámenes, diagnóstico y tratamiento de trastornos ginecológicos.",
         },
         {
             icon: faSyringe,
             title: "Anestesiologia",
             content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac venenatis est, at convallis magna.",
+                "Administración de anestesia y manejo del dolor durante cirugías, garantizando la seguridad del paciente.",
         },
         {
             icon: faHospital,
             title: "Cirugia",
             content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac venenatis est, at convallis magna.",
+                "Intervenciones manuales para tratar enfermedades o lesiones, mejorando la salud del paciente a través de procedimientos quirúrgicos.",
         },
     ];
 
@@ -85,7 +78,7 @@ function MedicalAreas() {
         <section>
             <div className="py-5 md:py-4 mx-auto w-full px-5 md:px-10 bg-accent">
                 <div className="relative flex flex-col items-start lg:flex-row lg:space-x-20">
-                    <div className="mb-5 md:mb-12 lg:mb-14">
+                    <div className="mb-5 md:mb-12 lg:mb-14 lg:mt-6">
                         <h2 className="text-3xl font-bold md:text-5xl text-primary mb-10">
                             Cubrimos cada aspecto de tu salud
                         </h2>
@@ -95,7 +88,7 @@ function MedicalAreas() {
                             className="object-cover md:ml-10 lg:ml-10"
                         />
                     </div>
-                    <div className="py-10 px-10 sm:flex-[1_1_225px] lg:flex-[1_1_250px] w-full flex-none">
+                    <div className="py-10 px-10 sm:flex-[1_1_225px] lg:flex-[1_1_250px] w-full flex-none lg:mt-10">
                         {faqs.slice(0, visibleCount).map((faq, index) => (
                             <div
                                 key={index}
@@ -105,14 +98,14 @@ function MedicalAreas() {
                                     className="flex cursor-pointer items-start justify-between"
                                     onClick={() => toggleFAQ(index)}
                                 >
-                                    <div className="relative mt-5 mb-5 ml-5 flex h-12 w-12 items-center justify-center">
-                                        <FontAwesomeIcon icon={faq.icon} className="h-12 w-12 lg:h-15 lg:w-15 object-cover" style={{ color: "#005B96", }} />
+                                    <div className="relative mt-5 mb-5 ml-5 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center">
+                                        <FontAwesomeIcon icon={faq.icon} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#005B96", }} />
                                     </div>
-                                    <div className="flex ml-5 sm:mt-5 text-center items-center py-4">
+                                    <div className="flex ml-5 sm:mt-5 text-center items-center py-6">
                                         <p className="text-info font-bold md:text-2xl">{faq.title}</p>
                                     </div>
-                                    <div className="relative mt-5 mb-5 ml-5 flex h-12 w-12 items-center justify-center">
-                                        <FontAwesomeIcon icon={openFAQ === index ? faMinus : faPlus} className="h-12 w-12 lg:h-15 lg:w-15 object-cover" style={{ color: "#005B96" }} />
+                                    <div className="relative mt-5 mb-5 ml-5 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center">
+                                        <FontAwesomeIcon icon={openFAQ === index ? faMinus : faPlus} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#005B96" }} />
                                     </div>
                                 </div>
                                 {openFAQ === index && (

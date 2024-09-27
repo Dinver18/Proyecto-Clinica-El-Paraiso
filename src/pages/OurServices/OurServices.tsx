@@ -18,7 +18,7 @@ function OurServices() {
             <li
               key={service.id}
               className={`p-2 cursor-pointer
-                ${selectedService === service.id ? 'text-blue-600 font-bold text-lg border-b-4 border-yellow-400' : 'text-gray-600'}
+                ${selectedService === service.id ? 'text-blue-600 font-bold text-lg border-b-4 border-warning' : 'text-gray-600'}
                 hover:text-blue-600 hover:text-lg`}
               onClick={() => setSelectedService(service.id)}
             >

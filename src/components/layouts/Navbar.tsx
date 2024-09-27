@@ -56,23 +56,23 @@ function Navbar() {
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } sm:hidden bg-primary absolute top-full left-0 w-full flex flex-col items-center space-y-2 mt-2`}
+        } sm:hidden bg-warning absolute top-full left-0 w-full flex flex-col items-center space-y-2 mt-2`}
       >
         <Link 
           to="/Home" 
-          className="text-white px-4 py-2 hover:bg-blue-700 rounded font-bold text-lg"
+          className="text-white px-4 py-1 hover:border-b-4 hover:border-yellow-400 font-bold text-lg"
           onClick={handleLinkClick} // Cierra el menú al hacer clic
         >
           Inicio
         </Link>
         
-        <Link to="/Ourservices" className="text-white px-4 py-2 hover:bg-blue-700 rounded font-bold text-lg"onClick={handleLinkClick}>
+        <Link to="/Ourservices" className="text-white px-4 py-1 hover:border-b-4 hover:border-yellow-400 font-bold text-lg"onClick={handleLinkClick}>
           Nuestros Servicios
         </Link>
-        <Link to="/AboutUs" className="text-white px-4 py-2 hover:bg-blue-700 rounded font-bold text-lg"onClick={handleLinkClick}>
+        <Link to="/AboutUs" className="text-white px-4 py-1 hover:border-b-4 hover:border-yellow-400 font-bold text-lg"onClick={handleLinkClick}>
           Sobre Nosotros
         </Link>
-        <Link to="/Contact" className="text-white px-4 py-2 hover:bg-blue-700 rounded font-bold text-lg"onClick={handleLinkClick}>
+        <Link to="/Contact" className="text-white px-4 py-1 hover:border-b-4 hover:border-yellow-400 font-bold text-lg"onClick={handleLinkClick}>
           Contacto
         </Link>
       </div>

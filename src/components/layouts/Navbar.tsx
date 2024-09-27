@@ -9,7 +9,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full bg-primary p-2 sticky top-0 z-40 flex flex-col">
+    <nav className="w-full bg-warning p-2 sticky top-0 z-40 flex flex-col">
       <div className="container mx-auto flex justify-center lg:justify-center items-center">
         {/* Enlaces de navegación */}
         <div className="hidden sm:flex items-center space-x-6">

@@ -33,7 +33,7 @@ export default {
 
           "success": "#ffc122",
 
-          "warning": "#ffffff",
+          "warning": "#ed3419",
 
           "error": "#ff0000",
 

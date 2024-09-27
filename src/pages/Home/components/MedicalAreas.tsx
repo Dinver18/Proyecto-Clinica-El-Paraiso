@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Foto from '../../../assets/FotoB.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faStethoscope, faPeopleGroup, faBaby, faPersonPregnant, faMinus, faVenus, faSyringe, faHospital } from "@fortawesome/free-solid-svg-icons";
-import FAQItem from "../Model/Areas";
+import { faPlus, faStethoscope, faPeopleGroup, faBaby, faPersonPregnant, faMinus, faVenus, faSyringe, faHospital,faHeartPulse } from "@fortawesome/free-solid-svg-icons";
+import MedicalItem from "../Model/Areas";
 
 function MedicalAreas() {
     // State to manage the number of FAQs visible
@@ -18,7 +18,7 @@ function MedicalAreas() {
 
 
     // Dummy data for FAQs
-    const faqs: FAQItem[] = [
+    const areas: MedicalItem[] = [
         {
             icon: faStethoscope,
             title: "Medicina interna",
@@ -50,6 +50,12 @@ function MedicalAreas() {
                 "Salud del sistema reproductivo femenino, que incluye exámenes, diagnóstico y tratamiento de trastornos ginecológicos.",
         },
         {
+            icon: faHeartPulse,
+            title: "Transplante",
+            content:
+                "",
+        },
+        {
             icon: faSyringe,
             title: "Anestesiologia",
             content:
@@ -64,15 +70,15 @@ function MedicalAreas() {
     ];
 
     const toggleShowMore = () => {
-        if (visibleCount < faqs.length) {
-            setVisibleCount(faqs.length); // Show all FAQs
+        if (visibleCount < areas.length) {
+            setVisibleCount(areas.length); // Show all FAQs
         } else {
             setVisibleCount(4); // Show only the first 3 FAQs
         }
     };
 
     // Determine the button text based on the current visibility
-    const buttonText = visibleCount < faqs.length ? "Ver más" : "Ver menos";
+    const buttonText = visibleCount < areas.length ? "Ver más" : "Ver menos";
 
     return (
         <section>
@@ -89,7 +95,7 @@ function MedicalAreas() {
                         />
                     </div>
                     <div className="py-10 px-10 sm:flex-[1_1_225px] lg:flex-[1_1_250px] w-full flex-none lg:mt-10">
-                        {faqs.slice(0, visibleCount).map((faq, index) => (
+                        {areas.slice(0, visibleCount).map((areas, index) => (
                             <div
                                 key={index}
                                 className="w-full overflow-hidden bg-accent border-b border-black"
@@ -99,18 +105,18 @@ function MedicalAreas() {
                                     onClick={() => toggleFAQ(index)}
                                 >
                                     <div className="relative mt-5 mb-5 ml-5 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center">
-                                        <FontAwesomeIcon icon={faq.icon} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#005B96", }} />
+                                        <FontAwesomeIcon icon={areas.icon} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68", }} />
                                     </div>
                                     <div className="flex ml-5 sm:mt-5 text-center items-center py-6">
-                                        <p className="text-info font-bold md:text-2xl">{faq.title}</p>
+                                        <p className="text-info font-bold md:text-2xl">{areas.title}</p>
                                     </div>
                                     <div className="relative mt-5 mb-5 ml-5 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center">
-                                        <FontAwesomeIcon icon={openFAQ === index ? faMinus : faPlus} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#005B96" }} />
+                                        <FontAwesomeIcon icon={openFAQ === index ? faMinus : faPlus} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68" }} />
                                     </div>
                                 </div>
                                 {openFAQ === index && (
                                     <div className="w-full overflow-hidden mb-4 max-w-2xl lg:max-w-4xl pt-6">
-                                        <p className="text-sm text-center font-bold sm:text-base">{faq.content}</p>
+                                        <p className="text-sm text-center font-bold sm:text-base">{areas.content}</p>
                                     </div>
                                 )}
                             </div>

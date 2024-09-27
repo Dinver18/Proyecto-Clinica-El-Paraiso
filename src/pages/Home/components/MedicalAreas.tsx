@@ -53,7 +53,7 @@ function MedicalAreas() {
             icon: faHeartPulse,
             title: "Transplante",
             content:
-                "",
+                "Especialidad médica dedicada a reemplazar órganos o tejidos enfermos por otros sanos, provenientes de donantes.",
         },
         {
             icon: faSyringe,
@@ -115,7 +115,7 @@ function MedicalAreas() {
                                     </div>
                                 </div>
                                 {openFAQ === index && (
-                                    <div className="w-full overflow-hidden mb-4 max-w-2xl lg:max-w-4xl pt-6">
+                                    <div className="w-full overflow-hidden mb-4 max-w-2xl lg:max-w-4xl">
                                         <p className="text-sm text-center font-bold sm:text-base">{areas.content}</p>
                                     </div>
                                 )}

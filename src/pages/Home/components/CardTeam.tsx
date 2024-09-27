@@ -12,7 +12,7 @@ function CardTeam() {
                 </div>
                 <div className="flex flex-col md:flex-row items-start justify-between">
                     {/* Imagen */}
-                    <div className="flex-shrink-0 ml-4 lg:-ml-2">
+                    <div className="flex-shrink-0 ml-4 lg:-ml-2 lg:ml-6">
                         <img
                             src={Foto}
                             alt="Imagen"

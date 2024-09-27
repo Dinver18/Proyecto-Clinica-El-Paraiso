@@ -6,7 +6,7 @@ const slides = [
     title: "Calidad",
     description: "Nos esforzamos por ofrecer servicios médicos de excelencia y gratuitos.",
     icon: <FaHeart className="text-secondary text-9xl" />,
-    backgroundColor: "bg-gradient-to-r from-primary to-gray-100",
+    backgroundColor: "bg-gradient-to-r from-warning to-gray-100",
   },
   {
     title: "Confianza",
@@ -19,7 +19,7 @@ const slides = [
     title: "Transparencia",
     description: "Nos caracterizamos por ser claros y directos en nuestras acciones y decisiones, fomentando la confianza en nuestros pacientes.",
     icon: <FaEye className="text-secondary text-9xl" />,
-    backgroundColor: "bg-gradient-to-r from-primary to-gray-100",
+    backgroundColor: "bg-gradient-to-r from-warning to-gray-100",
   },
 
   {
@@ -33,7 +33,7 @@ const slides = [
     title: "Profesionalismo",
     description: "Actuamos con responsabilidad, respeto y dedicación, garantizando una atención de calidad en cada servicio que ofrecemos.",
     icon: <FaBriefcase className="text-secondary text-9xl" />,
-    backgroundColor: "bg-gradient-to-r from-primary to-gray-100",
+    backgroundColor: "bg-gradient-to-r from-warning to-gray-100",
   },
   // Puedes agregar más slides aquí
 ];

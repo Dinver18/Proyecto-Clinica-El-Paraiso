@@ -1,6 +1,6 @@
-import telefono from "../../assets/telefono.svg"
-import ubicacion from "../../assets/ubicacion.svg"
+import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer() {
     return (
@@ -11,12 +11,12 @@ function Footer() {
             </div>
             <div className="relative w-full bg-slate-300 p-4 text-center">
                 <div className="flex bg-slate-300 text-center justify-center items-center">
-                    <img src={telefono} alt="logo telefono" className="mr-4 w-16 h-16" />
+                    <FontAwesomeIcon icon={faPhone} className="h-10 w-10 lg:mr-4 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68", }} />
                     <p className="text-black  md:text-2xl">"¿Tienes alguna consulta? ¡Llámanos, estamos a tu servicio!"<br />0212-8706898</p>
                 </div>
                 <div className="divider divider-vertical divider-primary divider-start"></div>
                 <div className="flex bg-slate-300 text-center justify-center items-center">
-                    <img src={ubicacion} alt="logo ubicacion" className="mr-4"></img>
+                    <FontAwesomeIcon icon={faLocationDot} className="h-10 w-10 lg:h-14 lg:w-14 lg:mr-4 object-cover" style={{ color: "#ed3419", }}></FontAwesomeIcon>
                     <p className="text-black md:text-2xl">"Calle Avenida Principal del Paraiso El Paraíso, Caracas en Distrito Federal."</p>
                 </div>
                 <div className="divider divider-vertical divider-warning divider-start"></div>

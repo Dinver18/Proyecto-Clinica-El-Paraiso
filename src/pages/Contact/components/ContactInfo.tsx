@@ -4,66 +4,65 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 function ContactInfo() {
     return (
-        <section className="flex flex-wrap w-full">
-            <div className="bg-accent mx-auto w-full px-10 py-8">
-                <h2 className="text-2xl font-bold text-info">
+        <section>
+            <div className="bg-accent mx-auto w-full px-10 py-8 rounded-lg shadow-md">
+                <h2 className="text-2xl font-bold text-info mb-4">
                     No dudes en comunicarte con nosotros por nuestros canales principales de contacto:
                 </h2>
+
+                {/* Canales Generales */}
                 <div className="w-full p-5">
-                    <h2 className="text-2xl font-bold text-info">
-                        Canales Generales
-                    </h2>
-                    <div className="mt-5 mb-5 flex flex-col lg:flex-row lg:justify-between">
-                        <div className="relative flex flex-col items-center justify-start mb-4 md:mb-0 md:w-1/3 lg:flex-row lg:items-center">
-                            <FontAwesomeIcon icon={faPhone} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68" }} />
-                            <p className="font-bold text-info px-5 text-center lg:text-left lg:text-2xl lg:ml-3">
+                    <h2 className="text-xl font-bold text-info mb-4">Canales Generales</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="flex items-center">
+                            <FontAwesomeIcon icon={faPhone} className="text-primary h-10 w-10" />
+                            <a href="tel:02124818789" className="font-bold text-info text-lg ml-4 hover:underline">
                                 0212-4818789
-                            </p>
+                            </a>
                         </div>
-                        <div className="relative flex flex-col items-center justify-start mb-4 md:mb-0 md:w-1/3 lg:flex-row lg:items-center">
-                            <FontAwesomeIcon icon={faEnvelope} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68" }} />
-                            <p className="font-bold text-info px-5 text-center lg:text-left lg:text-2xl lg:ml-3">
+                        <div className="flex items-center">
+                            <FontAwesomeIcon icon={faEnvelope} className="text-primary h-10 w-10" />
+                            <a href="mailto:contacto@clinicaelparaiso.com" className="font-bold text-info text-lg ml-4 hover:underline">
                                 contacto@clinicaelparaiso.com
-                            </p>
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                {/* Redes Sociales */}
                 <div className="w-full p-5">
-                    <h2 className="text-2xl font-bold text-info">
-                        Redes sociales
-                    </h2>
-                    <div className="mt-5 mb-5 flex flex-col lg:flex-row lg:flex-wrap lg:justify-between">
-                        <div className="relative flex flex-col items-center justify-start mb-4 md:mb-0 md:w-1/3 lg:flex-row lg:items-center">
-                            <FontAwesomeIcon icon={faTiktok} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68" }} />
-                            <p className="font-bold text-info px-5 text-center lg:text-left lg:text-2xl lg:ml-3">
-                                ClinicaPopularDelParaiso
-                            </p>
-                        </div>
-                        <div className="relative flex flex-col items-center justify-start mb-4 md:mb-0 md:w-1/3 lg:flex-row lg:items-center">
-                            <FontAwesomeIcon icon={faInstagram} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68" }} />
-                            <a href="https://www.instagram.com/ambparaiso24?igsh=NmhnNDc0cHBxaXRh" target="_blank">
-                                <p className="font-bold text-info px-5 text-center lg:text-left lg:text-2xl lg:ml-3">
-                                    @ambparaiso24
-                                </p>
+                    <h2 className="text-xl font-bold text-info mb-4">Redes sociales</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="flex items-center p-2">
+                            <FontAwesomeIcon icon={faTiktok} className="text-primary h-10 w-10 p-2" />
+                            <a href="https://www.tiktok.com/@ivss_oficial" target="_blank" rel="noopener noreferrer" className="font-bold text-info text-lg ml-4 hover:underline">
+                                ClinicaPopularDel
+                                Paraiso
                             </a>
                         </div>
-                        <div className="relative flex flex-col items-center justify-start mb-4 md:mb-0 md:w-1/3 lg:flex-row lg:items-center">
-                            <FontAwesomeIcon icon={faFacebook} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68" }} />
-                            <p className="font-bold text-info px-5 text-center lg:text-left lg:text-2xl lg:ml-3">
-                                ambparaiso
-                            </p>
+                        <div className="flex items-center p-2">
+                            <FontAwesomeIcon icon={faInstagram} className="text-primary h-10 w-10" />
+                            <a href="https://www.instagram.com/ambparaiso24" target="_blank" rel="noopener noreferrer" className="font-bold text-info text-lg ml-4 hover:underline">
+                                @ambparaiso24
+                            </a>
                         </div>
-                        <div className="relative flex flex-col items-center justify-start mb-4 md:mb-0 md:w-1/3 lg:flex-row lg:items-center lg:mt-6">
-                            <FontAwesomeIcon icon={faTwitter} className="h-10 w-10 lg:h-14 lg:w-14 object-cover" style={{ color: "#001b68" }} />
-                            <p className="font-bold text-info px-5 text-center lg:text-left lg:text-2xl lg:ml-3">
+                        <div className="flex items-center p-2">
+                            <FontAwesomeIcon icon={faFacebook} className="text-primary h-10 w-10" />
+                            <a href="https://www.instagram.com/ambparaiso24" target="_blank" rel="noopener noreferrer" className="font-bold text-info text-lg ml-4 hover:underline">
+                                ambparaiso
+                            </a>
+                        </div>
+                        <div className="flex items-center p-2">
+                            <FontAwesomeIcon icon={faTwitter} className="text-primary h-10 w-10" />
+                            <a href="https://www.instagram.com/ambparaiso24" target="_blank" rel="noopener noreferrer" className="font-bold text-info text-lg ml-4 hover:underline">
                                 ambparaiso2024
-                            </p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default ContactInfo
+export default ContactInfo;

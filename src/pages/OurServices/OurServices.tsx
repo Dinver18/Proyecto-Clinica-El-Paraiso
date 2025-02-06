@@ -6,7 +6,7 @@ import { useServices } from './hooks/useServices';
 function OurServices() {
   const { servicios } = useServices(); // Usar hook para obtener los servicios
   const [selectedService, setSelectedService] = useState<string | null>(servicios.length > 0 ? servicios[0].id : null);
-  
+
 
   return (
     <div className="flex flex-col lg:flex-row">
@@ -15,15 +15,19 @@ function OurServices() {
         <h2 className="text-lg font-bold mb-4">Nuestros Servicios</h2>
         <ul>
           {servicios.map((service) => (
-            <li
-              key={service.id}
-              className={`p-2 cursor-pointer
+
+            <Link to={service.id}>
+              <li
+                key={service.id}
+                className={`p-2 cursor-pointer
                 ${selectedService === service.id ? 'text-blue-600 font-bold text-lg border-b-4 border-warning' : 'text-gray-600'}
                 hover:text-blue-600 hover:text-lg`}
-              onClick={() => setSelectedService(service.id)}
-            >
-              <Link to={service.id}>{service.title}</Link>
-            </li>
+                onClick={() => setSelectedService(service.id)}
+              >
+                <h2>{service.title}</h2>
+              </li>
+            </Link>
+
           ))}
         </ul>
       </div>

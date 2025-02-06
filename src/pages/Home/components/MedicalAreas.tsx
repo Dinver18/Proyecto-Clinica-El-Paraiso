@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Foto from '../../../assets/FotoB.jpg';
+import Foto from '../../../assets/Segunda-foto.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faStethoscope, faPeopleGroup, faBaby, faPersonPregnant, faMinus, faVenus, faSyringe, faHospital,faHeartPulse } from "@fortawesome/free-solid-svg-icons";
 import MedicalItem from "../Model/Areas";

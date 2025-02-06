@@ -54,8 +54,8 @@ function ContactInfo() {
                         </div>
                         <div className="flex items-center p-2">
                             <FontAwesomeIcon icon={faTwitter} className="text-primary h-10 w-10" />
-                            <a href="https://www.instagram.com/ambparaiso24" target="_blank" rel="noopener noreferrer" className="font-bold text-info text-lg ml-4 hover:underline">
-                                ambparaiso2024
+                            <a href="https://x.com/ivssoficial" target="_blank" rel="noopener noreferrer" className="font-bold text-info text-lg ml-4 hover:underline">
+                                ivssoficial
                             </a>
                         </div>
                     </div>

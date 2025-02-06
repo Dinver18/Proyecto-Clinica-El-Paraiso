@@ -8,9 +8,13 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import Home from './pages/Home/Home';
 import Footer from './components/layouts/Footer';
 import ScrollUp from './components/layouts/ScrollUp';
+import { useEffect } from 'react';
 
 
 function App() {
+  useEffect(() => {
+    document.title = "Clínica Popular El Paraíso - Doctor Francisco Salazar";
+  }, []);
   return (
     <>
       <Router>

@@ -21,7 +21,7 @@ function AboutUs() {
             <div className="mt-0 lg:mt-12">
               <p className="text-xl lg:text-3xl text-info font-semibold text-center p-2">Quiénes somos</p>
               <p className="text-sm text-black sm:text-base">
-                La Clínica Popular El Paraíso ha sido un pilar en la salud de nuestra comunidad desde su fundación en [año de fundación]. Nuestra misión es ofrecer atención médica de alta calidad, accesible y centrada en el paciente. Con una visión clara hacia el futuro, nos esforzamos por seguir siendo un referente en el cuidado de la salud en Caracas.
+                La Clínica Popular El Paraíso ha sido un pilar en la salud de nuestra comunidad desde su fundación. Nuestra misión es ofrecer atención médica de alta calidad, accesible y centrada en el paciente. Con una visión clara hacia el futuro, nos esforzamos por seguir siendo un referente en el cuidado de la salud en Caracas.
               </p>
             </div>
           </div>

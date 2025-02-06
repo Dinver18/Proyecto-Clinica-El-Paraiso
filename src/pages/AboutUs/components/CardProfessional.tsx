@@ -53,8 +53,11 @@ function CardProfessional() {
               className="mb-4 inline-block h-52 w-full object-cover"
             />
             <p className="font-bold text-center">Departamento de enfermeria</p>
-            <p className="text-sm text-gray-700 font-bold">
-              Dra.Candelaria Rodríguez <br /> Jefa de transplante renal <br />
+            <p className="text-sm text-gray-700 font-bold text-center">
+              Lcda.Gabriela López <br /> Adjunta Administrativa <br />
+            </p>
+            <p className="text-sm text-gray-700 font-bold text-center">
+              Angela Fuentes <br /> Adjunta Docente <br />
             </p>
           </div>
           {/* Item */}

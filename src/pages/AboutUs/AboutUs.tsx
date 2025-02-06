@@ -47,7 +47,7 @@ function AboutUs() {
               className="h-96 lg:h-[32rem] w-full lg:w-[1000px] max-w-[550px] object-cover"
             />
             {/* Texto */}
-            <div className="mt-0 lg:mt-12 px-12 ml-14">
+            <div className="mt-0 lg:mt-12 lg:px-12 lg:ml-12">
               <p className="text-xl lg:text-3xl text-info font-semibold text-center">"Trabajamos por tu salud y beneficio"</p>
               <p className="text-xl lg:text-3xl text-info font-semibold text-center p-2">Recursos Humano </p>
               <p className="text-sm text-black sm:text-base text-center">

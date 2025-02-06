@@ -14,13 +14,13 @@ function CardProfessional() {
         </h2>
 
         {/* Content */}
-        <div className="mx-auto grid justify-items-center gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 lg:justify-items-stretch">
+        <div className="mx-auto grid justify-items-stretch gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 lg:justify-items-stretch">
           {/* Item */}
           <div className="flex max-w-sm flex-col items-center gap-4 rounded-md border border-solid border-gray-300 px-8 py-6 md:max-w-full">
             <img
               src={FotoEquipoNefrologia}
               alt=""
-              className="mb-4 inline-block h-52 w-full object-cover"
+              className="mb-4 inline-block h-70 lg:h-52 w-full object-cover"
             />
             <p className="font-bold item-center">Unidad de nefrologia</p>
             <p className="text-sm text-gray-700 font-bold">
